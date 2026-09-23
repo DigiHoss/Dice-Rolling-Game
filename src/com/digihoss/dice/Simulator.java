@@ -1,10 +1,14 @@
 package com.digihoss.dice;
 import java.util.Random;
+import java.util.Scanner;
 public class Simulator {
     public  static void main() {
             Random rand = new Random();
             int rolledNumber = rand.nextInt(6) + 1;
-            System.out.println(display(rolledNumber));
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("How many dice you would like to roll?");
+            String numberOfDices = scanner.nextLine();
+            System.out.println("About to roll " + numberOfDices + " dice");
     }
 
     static String display(int value) {
